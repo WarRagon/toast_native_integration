@@ -14,6 +14,9 @@ importers:
       '@tauri-apps/plugin-opener':
         specifier: ^2
         version: 2.2.5
+      tauri-plugin-example-api:
+        specifier: file:./tauri-plugin-example
+        version: file:tauri-plugin-example
     devDependencies:
       '@sveltejs/adapter-static':
         specifier: ^3.0.6
@@ -563,6 +566,9 @@ packages:
     resolution: {integrity: sha512-rb/bkYG9jq67OCWikMvaPnfOobyGn0JizVDwHpdeBtLiNXPMcoA9GTFC3BhptP7xGNquUU8J5GiS7PlGlfDAFA==}
     engines: {node: '>=18'}
 
+  tauri-plugin-example-api@file:tauri-plugin-example:
+    resolution: {directory: tauri-plugin-example, type: directory}
+
   totalist@3.0.1:
     resolution: {integrity: sha512-sf4i37nQ2LBx4m3wB74y+ubopq6W/dIzXg0FDGjsYnZHVa1Da8FH853wlL2gtUhg+xJXjfk3kUZS3BRoQeoQBQ==}
     engines: {node: '>=6'}
@@ -1041,6 +1047,10 @@ snapshots:
       locate-character: 3.0.0
       magic-string: 0.30.17
       zimmerframe: 1.1.2
+
+  tauri-plugin-example-api@file:tauri-plugin-example:
+    dependencies:
+      '@tauri-apps/api': 2.2.0
 
   totalist@3.0.1: {}
 

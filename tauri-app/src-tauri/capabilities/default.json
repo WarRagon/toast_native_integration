@@ -6,7 +6,6 @@
   "permissions": [
     "core:default",
     "opener:default",
-    "example:default",
-    "example:allow-toast"
+    "example:default"
   ]
 }
