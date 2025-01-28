@@ -1,5 +1,5 @@
 # toast_plugin
-A sample project demonstrating Android native Toast using Flutter and Svelte + Tauri. This repository showcases how to display Toast messages in Android using native code (Kotlin/Java) within Flutter and Svelte + Tauri environments.
+A sample project demonstrating Android/iOS native Toast using Flutter and Svelte + Tauri. This repository showcases how to display Toast messages in Android using native code (Kotlin/Swift) within Flutter and Svelte + Tauri environments.
 
 ## flutter_application
 flutter pub get
