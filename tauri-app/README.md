@@ -101,7 +101,7 @@ const COMMANDS: &[&str] = &["ping", "toast"];
 ```
 tauri-app/tauri-plugin-example/permissions/default.toml
 ```
-permissions = ["allow-ping", "allow-toast"]
+permissions = ["allow-ping"]
 ->
 permissions = ["allow-ping", "allow-toast"]
 ```
