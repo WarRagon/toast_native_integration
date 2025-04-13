@@ -274,3 +274,106 @@ tauri-app
 ```
 pnpm install
 ```
+
+## android_application
+android studio 
+
+app/src/main/java/com/example/android_application/MainActivity.kt
+```
+package com.example.android_application
+
+import android.os.Bundle
+
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+
+import androidx.compose.foundation.layout.Column
+import androidx.compose.material3.Button
+import androidx.compose.material3.Text
+
+class MainActivity : ComponentActivity() {
+    private lateinit var ToastUtils: ToastUtils
+
+    override fun onCreate(state: Bundle?) {
+        super.onCreate(state)
+
+        ToastUtils = ToastUtils(this)
+
+        setContent {
+            Column {
+                Button(
+                    onClick = { ToastUtils.toast("toast") },
+                    content = { Text("Toast") }
+                )
+            }
+        }
+    }
+}
+```
+app/src/main/java/com/example/android_application/ToastUtils.kt
+```
+package com.example.android_application
+
+import android.app.Activity
+import android.widget.Toast
+
+class ToastUtils(private val activity: Activity) {
+    
+    fun toast(message: String?) {
+        Toast.makeText(activity, message, Toast.LENGTH_SHORT).show()
+    }
+}
+```
+
+## ios_application
+Xcode
+
+ios_application/ios_application/ContentView.swift
+```
+import SwiftUI
+
+struct ContentView: View {
+    
+    var body: some View {
+        VStack {
+            Button("Toast") {
+                ToastUtils.show("Toast")
+            }
+        }
+    }
+}
+
+#Preview {
+    ContentView()
+}
+
+```
+
+ios_application/ios_application/ToastUtils.swift
+```
+import SwiftUI
+import UIKit
+
+class ToastUtils {
+    static func show(_ message: String?) {
+        guard let message = message else { return }
+        
+        DispatchQueue.main.async {
+            let alert = UIAlertController(
+                title: nil,
+                message: message,
+                preferredStyle: .alert
+            )
+            
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+               let viewController = windowScene.windows.first?.rootViewController {
+                viewController.present(alert, animated: true)
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    alert.dismiss(animated: true)
+                }
+            }
+        }
+    }
+}
+```
