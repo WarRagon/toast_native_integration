@@ -1,5 +1,7 @@
-# toast_plugin
-A sample project demonstrating Android/iOS native Toast using Flutter and Svelte + Tauri. This repository showcases how to display Toast messages in Android using native code (Kotlin/Swift) within Flutter and Svelte + Tauri environments.
+# Cross-Platform Native Toast Implementation
+A sample project demonstrating Android/iOS native Toast using Flutter, Svelte + Tauri, native Android (Kotlin), and native iOS (Swift). This repository showcases how to display Toast messages across multiple platforms using their respective native code implementations.
+
+> **한글 설명**: Flutter, Svelte + Tauri, 네이티브 안드로이드(Kotlin), 네이티브 iOS(Swift)를 사용하여 Android/iOS 네이티브 Toast를 구현하는 샘플 프로젝트입니다. 이 저장소는 각 플랫폼의 네이티브 코드 구현을 사용하여 여러 플랫폼에서 Toast 메시지를 표시하는 방법을 보여줍니다.
 
 ## flutter_application
 flutter pub get
